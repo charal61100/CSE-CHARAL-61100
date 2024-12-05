@@ -12,6 +12,39 @@
             background-color: #1a1a1a;
             color: #f4f4f4;
         }
+       header {
+    background-color: #990000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 100%; /* Rendre l'image responsive */
+    height: auto;
+    max-width: 140px; /* Largeur maximale du logo */
+}
+
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 768px) {
+    header img {
+        max-width: 100px; /* Réduire la taille du logo sur les écrans plus petits */
+        left: 10px; /* Ajuster l'alignement à gauche */
+        top: 10px; /* Réduire l'espacement en haut */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Ajuster la taille du titre sur les petits écrans */
+    }
+
+    header p {
+        font-size: 1em; /* Ajuster la taille du texte sous le titre */
+    }
+}
         header {
             background-color: #990000;
             color: white;
