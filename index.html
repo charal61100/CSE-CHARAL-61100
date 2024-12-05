@@ -12,35 +12,57 @@
             background-color: #1a1a1a;
             color: #f4f4f4;
         }
-       header {
+       /* Style général du body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+/* Style du header */
+header {
     background-color: #990000;
     color: white;
-    padding: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centre le contenu */
+    align-items: center; /* Aligne verticalement le contenu */
+    padding: 20px;
     position: relative;
+    flex-wrap: wrap; /* Permet le wrapping du contenu sur petits écrans */
 }
 
+/* Style de l'image du logo */
 header img {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 100%; /* Rendre l'image responsive */
+    width: 120px; /* Taille du logo */
     height: auto;
-    max-width: 140px; /* Largeur maximale du logo */
+    margin-right: 20px; /* Espacement à droite du logo */
 }
 
-/* Media Queries pour les écrans plus petits */
+/* Style du titre */
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Permet au titre de s'étendre sur l'espace restant */
+}
+
+/* Ajustements pour les petits écrans */
 @media (max-width: 768px) {
+    /* Ajuster la taille du logo */
     header img {
-        max-width: 100px; /* Réduire la taille du logo sur les écrans plus petits */
-        left: 10px; /* Ajuster l'alignement à gauche */
-        top: 10px; /* Réduire l'espacement en haut */
+        width: 100px; /* Réduire la taille du logo */
+        margin-right: 10px; /* Réduire l'espacement à droite */
     }
 
+    /* Ajuster le titre */
     header h1 {
-        font-size: 1.8em; /* Ajuster la taille du titre sur les petits écrans */
+        font-size: 1.8em; /* Réduire la taille du titre */
+        text-align: center;
+        margin-top: 0;
     }
-
+}
     header p {
         font-size: 1em; /* Ajuster la taille du texte sous le titre */
     }
