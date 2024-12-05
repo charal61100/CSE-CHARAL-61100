@@ -1,0 +1,381 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTE PARTENARIAT CSE CHARAL</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #990000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 120px;
+            height: auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .offer {
+            background-color: #333;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .offer:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+        .offer img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #444;
+        }
+        .offer .details {
+            flex-grow: 1;
+        }
+        .offer h2 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #e60000;
+        }
+        .offer p {
+            font-size: 1em;
+            color: #f4f4f4;
+        }
+        footer {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        /* Galerie d'images en miniatures */
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 150px; /* Taille des miniatures */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); /* Effet de survol */
+}
+
+/* Modal (fenêtre d'agrandissement d'image) */
+.modal {
+    display: none; /* Initialement masqué */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo-charal.jpg" alt="Logo Charal" style="max-width: 140px; height: auto;">
+        <h1>LISTE PARTENARIAT CSE CHARAL</h1>
+        <p>Accédez à toutes vos offres partenaires.</p>
+    </header>
+    <div class="content">
+        <!-- Début des offres -->
+        <div class="offer">
+            <img src="images/carte-brasserie.jpg" alt="Brasserie Le Capricorne">
+            <div class="details">
+                <h2>Brasserie Le Capricorne Flers</h2>
+                <p>-10%. Règlement uniquement par CB ou chèque bancaire.<br>
+                Le soir : restauration groupe (max 30 personnes sur réservation) : entrée, plat et dessert.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-monbana.jpg" alt="Chocolat Monbana">
+            <div class="details">
+                <h2>Chocolat Monbana Flers</h2>
+                <p>-5% sur tous les achats en boutique, cumulable avec les 5% de la carte fidélité (total -10% hors promotions).</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-saint-vincent.jpg" alt="La Cave Saint Vincent">
+            <div class="details">
+                <h2>La Cave Saint Vincent Flers</h2>
+                <p>-10%, non cumulable avec les avantages carte fidélité.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-brulerie.jpg" alt="La Brulerie">
+            <div class="details">
+                <h2>La Brulerie Flers</h2>
+                <p>-5% sur le café et le thé en vrac.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-vb.jpg" alt="V&B">
+            <div class="details">
+                <h2>V&B Flers</h2>
+                <p>
+                    **Côté cave** : -5% sur les achats (hors champagne, grands crus, et promotions).<br>
+                    **Côté bar** : restauration pour afterworks et pots de départ (boissons + food).
+                </p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-bebe9.png" alt="Bébé 9">
+            <div class="details">
+                <h2>Bébé 9 Flers</h2>
+                <p>-10% sur les produits du magasin (hors soldes et promotions).</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-miecaline.jpg" alt="La Mie Câline">
+            <div class="details">
+                <h2>La Mie Câline Flers</h2>
+                <p>-10% sur tout le magasin (ZI et centre-ville) sur présentation de la carte CSE CHARAL.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-beauty.jpg" alt="Beauty Éthique">
+            <div class="details">
+                <h2>Beauty Éthique Pointel</h2>
+                <p>-10% sur toutes les prestations. Parfums CHOGAN : 28€ les 100ml au lieu de 30€.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-peauethique.jpg" alt="Peau Éthique">
+            <div class="details">
+                <h2>Peau Éthique Flers</h2>
+                <p>
+                    -10% sur les prestations cabine toute l’année.<br>
+                    -15% si prestations + achats produits.<br>
+                    -30% ponctuellement sur produits ciblés (Fête des mères, Noël...).
+                </p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-dietplus.jpg" alt="Dietplus">
+            <div class="details">
+                <h2>Dietplus Flers</h2>
+                <p>-5% offert sur le programme lors du premier rendez-vous de bilan.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-librairie.jpg" alt="Quartier Libre Librairie">
+            <div class="details">
+                <h2>Quartier Libre Librairie Flers</h2>
+                <p>-5% de réduction non cumulable avec les chèques Lire et Culture.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-dubourg.png" alt="Dubourg Déco">
+            <div class="details">
+                <h2>Dubourg Déco Flers</h2>
+                <p>-10% sur les peintures. -5% sur le reste (hors commandes).</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/carte-joueclub.png" alt="JouéClub">
+            <div class="details">
+                <h2>JouéClub Flers</h2>
+                <p>-5% toute l’année dans les magasins de Flers, Argentan et Mondeville.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/Bijouterie-Foucher.jpg" alt="Bijouterie Foucher">
+            <div class="details">
+                <h2>Bijouterie Foucher Flers</h2>
+                <p>-5% de réduction sur tout le magasin sur présentation de la carte CSE.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-magic.png" alt="magic park">
+            <div class="details">
+                <h2>Magic Park Herouville</h2>
+                <p>.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-culinarion.png" alt="culinarion">
+            <div class="details">
+                <h2>culinarion Caen</h2>
+                <p>-5% de reduction sur tout le magasin sur présentation de la carte CSE.</p>
+            </div>
+        </div>
+
+        <div class="offer">
+            <img src="images/logo-apn.jpg" alt="APN Studio">
+            <div class="details">
+                <h2>APN Studio Flers</h2>
+                <p>Tirage numérique: tarif unique à 0,23€
+Agrandissement, copie, tirage depuis diapo:
+-25% sur le tarif.
+Equipement photo:- 5%.
+Location borne selfie: -10%</p>
+            </div>
+        </div>
+
+         <div class="offer">
+            <img src="images/logo-carre.png" alt="carré flore">
+            <div class="details">
+                <h2>Carré flore Flers</h2>
+                <p>-5% de reduction lors du passage en boutique. Non cumulable avec les avantage carte de fidélité.</p>
+            </div>
+        </div>
+
+        <!-- Ajout de la galerie d'images sous forme d'une offre -->
+        <div class="offer">
+            <div class="details">
+                <h2>Programme et Réduction Zenith de Caen</h2>
+                <p>Découvrez les programmes et réductions du Zenith de Caen en images. Pour profiter de ces offres, contactez le 02.31.50.32.30 et n'oubliez pas de mentionner que vous êtes membre de Charal.</p>
+            </div>
+        </div>
+
+        <!-- Galerie d'images -->
+        <div class="gallery">
+            <img src="images/programmezenith.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/programmezenith2.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/programmezenith3.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/programmezenith4.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+        </div>
+
+        <!-- Modal pour afficher l'image en grand -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Ouvrir le modal et afficher l'image en grand
+            function openModal(imgElement) {
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = imgElement.src;
+            }
+
+            // Fermer le modal
+            function closeModal() {
+                var modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+        </script>
+
+
+<!-- Ajout de la galerie d'images sous forme d'une offre -->
+        <div class="offer">
+            <div class="details">
+                <h2>Programme et Réduction antarès Le Mans</h2>
+                <p>Découvrez les programmes et réductions d'Antarès Le Mans en images. Pour profiter de ces offres, contactez le 02.31.50.32.30 et n'oubliez pas de mentionner que vous êtes membre de Charal.</p>
+            </div>
+        </div>
+
+        <!-- Galerie d'images -->
+        <div class="gallery">
+            <img src="images/programmeantares.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/programmeantares2.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/programmeantares3.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+        </div>
+
+        <!-- Modal pour afficher l'image en grand -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Ouvrir le modal et afficher l'image en grand
+            function openModal(imgElement) {
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = imgElement.src;
+            }
+
+            // Fermer le modal
+            function closeModal() {
+                var modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+        </script>
+
+
+        
+                        <!-- Fin des offres -->
+    </div>
+    <footer>
+        <p>&copy; 2025 CSE Charal - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
