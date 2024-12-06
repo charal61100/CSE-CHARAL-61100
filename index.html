@@ -216,13 +216,48 @@ header h1 {
             </div>
         </div>
 
+       <!-- Ajout de la galerie d'images sous forme d'une offre -->
         <div class="offer">
-            <img src="images/logo-catalina.jpg" alt="catalina périsa">
             <div class="details">
-                <h2>Catalina Périsa</h2>
+                <h2>Catalina Perisa Flers</h2>
                 <p>7% de remise sur présentation de la carte CSE Charal.</p>
             </div>
         </div>
+
+        <!-- Galerie d'images -->
+        <div class="gallery">
+            <img src="images/Cataloguecatarina1.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina2.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina3.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina4.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina5.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina6.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina7.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina8.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+        </div>
+
+        <!-- Modal pour afficher l'image en grand -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Ouvrir le modal et afficher l'image en grand
+            function openModal(imgElement) {
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = imgElement.src;
+            }
+
+            // Fermer le modal
+            function closeModal() {
+                var modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+        </script>
         
         <div class="offer">
             <img src="images/logo-brulerie.jpg" alt="La Brulerie">
