@@ -195,67 +195,75 @@ header h1 {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8; /* Fond général clair */
         }
 
         header {
-            text-align: center;
-            padding: 20px;
             background-color: red; /* Fond rouge */
-            color: black; /* Couleur du texte */
+            color: black; /* Texte noir */
+            text-align: center;
+            padding: 30px 20px;
+            position: relative; /* Pour une mise en page plus contrôlée */
         }
 
         header h1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 1.5em;
+            font-size: 2em;
             margin: 0;
-            color: black; /* Titre en noir */
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
-        header h1 img {
+        header img {
             max-width: 140px;
             height: auto;
-            margin-bottom: 10px;
+            margin: 0 auto 20px; /* Centrage et espacement */
+            display: block; /* Pour éviter qu'elle ne chevauche le texte */
         }
 
         header p {
-            font-size: 1em;
-            color: black; /* Texte en noir */
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            color: #fff; /* Texte secondaire en blanc pour contraste */
         }
 
         .content {
             padding: 20px;
+            text-align: center;
         }
 
-        /* Media Query pour les petits écrans */
+        /* Media Queries pour les petits écrans */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.2em;
+            header {
+                padding: 20px 10px;
             }
 
-            header h1 img {
-                max-width: 100px; /* Réduit la taille de l'image sur téléphone */
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header img {
+                max-width: 100px; /* Réduction de la taille de l'image */
+                margin-bottom: 15px;
+            }
+
+            header p {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>
-            <img src="images/logo-charal.jpg" alt="Logo Charal">
-            LISTE PARTENARIAT CSE CHARAL FLERS
-        </h1>
+        <img src="images/logo-charal.jpg" alt="Logo Charal">
+        <h1>Liste Partenariat CSE Charal Flers</h1>
         <p>Accédez à toutes vos offres partenaires.</p>
     </header>
     <div class="content">
         <!-- Contenu principal ici -->
+        <p>Bienvenue sur la plateforme des partenariats. Profitez de toutes vos offres exclusives !</p>
     </div>
 </body>
 </html>
-
 
         <!-- Début des offres -->
         <div class="offer">
