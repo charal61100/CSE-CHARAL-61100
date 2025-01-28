@@ -184,87 +184,13 @@ header h1 {
 
     </style>
 </head>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partenariat CSE Charal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8; /* Fond général clair */
-        }
-
-        header {
-            background-color: red; /* Fond rouge */
-            color: black; /* Texte noir */
-            text-align: center;
-            padding: 30px 20px;
-            position: relative; /* Pour une mise en page plus contrôlée */
-        }
-
-        header h1 {
-            font-size: 2em;
-            margin: 0;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        header img {
-            max-width: 140px;
-            height: auto;
-            margin: 0 auto 20px; /* Centrage et espacement */
-            display: block; /* Pour éviter qu'elle ne chevauche le texte */
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-            color: #fff; /* Texte secondaire en blanc pour contraste */
-        }
-
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Media Queries pour les petits écrans */
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 10px;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            header img {
-                max-width: 100px; /* Réduction de la taille de l'image */
-                margin-bottom: 15px;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-        }
-    </style>
-</head>
 <body>
     <header>
-        <img src="images/logo-charal.jpg" alt="Logo Charal">
-        <h1>Liste Partenariat CSE Charal Flers</h1>
+        <img src="images/logo-charal.jpg" alt="Logo Charal" style="max-width: 140px; height: auto;">
+        <h1>LISTE PARTENARIAT CSE CHARAL</h1>
         <p>Accédez à toutes vos offres partenaires.</p>
     </header>
     <div class="content">
-        <!-- Contenu principal ici -->
-        <p>Bienvenue sur la plateforme des partenariats. Profitez de toutes vos offres exclusives !</p>
-    </div>
-</body>
-</html>
-
         <!-- Début des offres -->
         <div class="offer">
             <img src="images/carte-brasserie.jpg" alt="Brasserie Le Capricorne">
@@ -298,6 +224,41 @@ header h1 {
                 <p>7% de remise sur présentation de la carte CSE Charal.</p>
             </div>
         </div>
+
+        <!-- Galerie d'images -->
+        <div class="gallery">
+            <img src="images/Cataloguecatarina1.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina2.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina3.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina4.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina5.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina6.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina7.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+            <img src="images/Cataloguecatarina8.jpg" alt="Zenith Caen" class="gallery-item" onclick="openModal(this)">
+        </div>
+
+        <!-- Modal pour afficher l'image en grand -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // Ouvrir le modal et afficher l'image en grand
+            function openModal(imgElement) {
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = imgElement.src;
+            }
+
+            // Fermer le modal
+            function closeModal() {
+                var modal = document.getElementById("imageModal");
+                modal.style.display = "none";
+            }
+        </script>
         
         <div class="offer">
             <img src="images/logo-brulerie.jpg" alt="La Brulerie">
